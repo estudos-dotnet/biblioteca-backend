@@ -17,7 +17,7 @@ steps:
   displayName: 'restaurando pacotes'
 
 - script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+  displayName: 'realizando build - ambiente:$(buildConfiguration)'
 
 - script: dotnet test
   displayName: 'executando testes'
