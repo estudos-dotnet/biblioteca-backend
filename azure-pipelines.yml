@@ -14,8 +14,10 @@ variables:
 
 steps:
 - script: dotnet restore
+  displayName: 'restaurando pacotes'
 
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
 - script: dotnet test
+  displayName: 'executando testes'
