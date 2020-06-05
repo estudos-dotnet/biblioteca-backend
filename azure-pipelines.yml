@@ -18,6 +18,13 @@ steps:
 
 - script: dotnet test
   displayName: 'executando testes'
+- task: CopyFiles@2
+  displayName: 'copiando arquivos'
+  inputs:
+    targetFolder: '$(Build.ArtifactStagingDirectory)'    
 
-- task: PublishBuildArtifacts@1
+- task: PublishBuildArtifacts@1    
+  displayName: 'publicando artefato: drop'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
 
